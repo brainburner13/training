@@ -88,5 +88,5 @@ export default compose(
   connect<MapStatePropsType, MapDispatchPropsType, OwnPropsType, AppStateType>(
     mapStateToProps, {follow, unfollow, getUsers}),
   WithAuthRedirect
-) (UsersContainer) as React.ComponentType;
+) (UsersContainer) as React.ComponentType<OwnPropsType>;
 
