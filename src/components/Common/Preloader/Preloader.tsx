@@ -1,7 +1,9 @@
 import React from 'react';
 import loader from '../../../assets/images/loadeer.gif';
 
-let Preloader = (props) => {
+type PropsType = {};
+
+let Preloader: React.FC<PropsType> = (props) => {
     return (
       <div>
         <img src={loader} alt=''/>

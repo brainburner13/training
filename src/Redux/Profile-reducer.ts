@@ -3,7 +3,7 @@ import { profileAPI } from '../api/profile-api';
 import { InferActionTypes, BaseThunkType } from './Redux-store';
 import {ProfileType, PhotosType} from '../types/types';
 
-type PostType = {
+export type PostType = {
   id: number,
   message: string,
   likesCount: number,

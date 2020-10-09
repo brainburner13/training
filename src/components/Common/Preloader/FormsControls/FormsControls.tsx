@@ -7,6 +7,8 @@ type FormControlPropsType = {
     meta: WrappedFieldMetaProps,
 };
 
+export type GetStringCase<T> = Extract<keyof T, string>;
+
 export const FormControl: React.FC<FormControlPropsType> = ({meta: {touched, error}, children}) => {
   const hasError = touched && error;
   return (

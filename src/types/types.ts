@@ -21,11 +21,13 @@ export type ProfileType = {
   fullName: string;
   contacts: contactsType;
   photos: PhotosType;
+  aboutMe: string;
 };
 
 export type UserType = {
   id: number;
   name: string;
-  statu: string;
-  ptotos: PhotosType;
+  status: string;
+  photos: PhotosType;
+  followed: boolean;
 };
