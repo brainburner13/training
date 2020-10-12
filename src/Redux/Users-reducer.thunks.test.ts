@@ -1,6 +1,6 @@
 import { follow } from "./dist/Users-reducer.dev";
 
-test('', () => {
+test('test', () => {
     const thunk = follow(1);
     const dispatchMock = jest.fn();
 
