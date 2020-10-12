@@ -13,7 +13,7 @@ let initialState = {
   followingInProgress: [] as Array<number>,
 };
 
-type InitialStateType = typeof initialState;
+export type InitialStateType = typeof initialState;
 type ActionsTypes = InferActionTypes<typeof actions>;
 type ThunkType = BaseThunkType<ActionsTypes>;
 

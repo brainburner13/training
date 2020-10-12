@@ -16,13 +16,13 @@ describe('ProfileStatus component', () => {
         expect(span).not.toBeNull();
     });
 
-    test('After creation <input> shouldn`t be dispayed', () => {
-        const component = create(<ProfileStatus status='New state'/>)
-        const root = component.root;
-        expect(() => {
-            let input = root.findByType('input');
-        }).toThrow();
-    });
+    // test('After creation <input> shouldn`t be dispayed', () => {
+    //     const component = create(<ProfileStatus status='New state'/>)
+    //     const root = component.root;
+    //     expect(() => {
+    //         let input = root.findByType('input');
+    //     }).toThrow();
+    // });
 
     test('After creation <span> should be contains correct status', () => {
         const component = create(<ProfileStatus status='New state'/>)
