@@ -2,6 +2,7 @@ import React from 'react';
 import {create} from 'react-test-renderer';
 import ProfileStatus from './ProfileStatus';
 
+// todo: fix jsx
 describe('ProfileStatus component', () => {
     test('Status from props should be in the state', () => {
         const component = create(<ProfileStatus status='New state'/>)
