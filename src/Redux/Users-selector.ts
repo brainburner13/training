@@ -5,6 +5,10 @@ export const getUsersData = (state: AppStateType) => {
   return state.usersPage.users
 };
 
+export const getUsersFilter = (state: AppStateType) => {
+  return state.usersPage.filter
+};
+
 export const getUsersSuperSelector = createSelector(getUsersData, (users) => {
   return users.filter(u => true)
 });
