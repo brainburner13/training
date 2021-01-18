@@ -38,6 +38,9 @@ const ProfileContainer = React.lazy(
 const DialogsContainer = React.lazy(
   () => import("./components/Dialogs/DialogsContainer")
 );
+const ChatPage = React.lazy(
+  () => import("./pages/Chat/ChatPage")
+);
 
 type MapPropsType = ReturnType<typeof mapStateToProps>;
 type DispatchPropsType = {
@@ -46,6 +49,7 @@ type DispatchPropsType = {
 
 const SuspendedProfile = WithSuspense(ProfileContainer);
 const SuspendedDialogs = WithSuspense(DialogsContainer);
+const SuspendedChatPage = WithSuspense(ChatPage);
 
 class App extends React.Component<MapPropsType & DispatchPropsType> {
   catchAllUnhandledErrors = (e: PromiseRejectionEvent) => {
@@ -116,12 +120,15 @@ class App extends React.Component<MapPropsType & DispatchPropsType> {
                     title="Any"
                   >
                     <Menu.Item key="9">
-                      <Link to="news">News</Link>
+                      <Link to="chat">Chat</Link>
                     </Menu.Item>
                     <Menu.Item key="10">
-                      <Link to="music">Music</Link>
+                      <Link to="news">News</Link>
                     </Menu.Item>
                     <Menu.Item key="11">
+                      <Link to="music">Music</Link>
+                    </Menu.Item>
+                    <Menu.Item key="12">
                       <Link to="settings">Settings</Link>
                     </Menu.Item>
                   </SubMenu>
@@ -147,6 +154,7 @@ class App extends React.Component<MapPropsType & DispatchPropsType> {
                   <Route path="/music" render={() => <Music />} />
                   <Route path="/settings" render={() => <Settings />} />
                   <Route path="/login" render={() => <LoginPage />} />
+                  <Route path="/chat" render={() => <SuspendedChatPage />} />
                   <Route path="*" render={() => <div>404 NOT FOUND</div>} />
                 </Switch>
               </Content>
